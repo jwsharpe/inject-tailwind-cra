@@ -11,7 +11,11 @@
   "bin": {
     "inject-tailwind-cra": "./cli.js"
   },
-  "keywords": ['react', 'create-react-app', 'tailwind-css'],
+  "keywords": [
+    "react",
+    "create-react-app",
+    "tailwind-css"
+  ],
   "devDependencies": {
     "autoprefixer": "^9.7.4",
     "postcss-cli": "^7.1.0",
