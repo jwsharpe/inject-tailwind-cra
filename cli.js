@@ -3,10 +3,12 @@ const { execSync } = require("child_process");
 const [, , ...args] = process.argv;
 const fs = require("fs");
 
+console.log("Adding dependencies");
 execSync("yarn add -D tailwindcss postcss-cli autoprefixer", err => {
   if (err) throw err;
 });
 
+console.log("Writing to public/index.html");
 fs.appendFile(
   "./public/index.html",
   '<link rel="stylesheet" href="styles.css" />',
@@ -15,6 +17,7 @@ fs.appendFile(
   }
 );
 
+console.log("Writing to postcss.config.js");
 fs.writeFile(
   "postcss.config.js",
   "module.exports = { plugins: [require('tailwindcss'), require('autoprefixer'),]};",
@@ -23,6 +26,7 @@ fs.writeFile(
   }
 );
 
+console.log("Writing to tailwind.config.js");
 fs.writeFile(
   "tailwind.config.js",
   "module.exports = {theme: {  extend: {}}, variants: {}, plugins: []};",
@@ -31,6 +35,7 @@ fs.writeFile(
   }
 );
 
+console.log("Writing to src/tailwind.css");
 fs.writeFile(
   "src/tailwind.css",
   "@tailwind base;\n@tailwind components;\n@tailwind utilities;",
@@ -39,6 +44,7 @@ fs.writeFile(
   }
 );
 
+console.log("Writing to package.json");
 const buffer = fs.readFileSync("package.json");
 const json = JSON.parse(buffer);
 json.scripts["build:styles"] = "postcss src/tailwind.css -o public/styles.css";
