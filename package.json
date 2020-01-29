@@ -1,6 +1,6 @@
 {
   "name": "inject-tailwind-cra",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "injects tailwind css into a create-react-app folder",
   "main": "cli.js",
   "scripts": {
@@ -11,6 +11,7 @@
   "bin": {
     "inject-tailwind-cra": "./cli.js"
   },
+  "keywords": ['react', 'create-react-app', 'tailwind-css'],
   "devDependencies": {
     "autoprefixer": "^9.7.4",
     "postcss-cli": "^7.1.0",
