@@ -1,0 +1,19 @@
+{
+  "name": "inject-tailwind-cra",
+  "version": "1.0.0",
+  "description": "injects tailwind css into a create-react-app folder",
+  "main": "cli.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "James Sharpe",
+  "license": "ISC",
+  "bin": {
+    "inject-tailwind-cra": "./cli.js"
+  },
+  "devDependencies": {
+    "autoprefixer": "^9.7.4",
+    "postcss-cli": "^7.1.0",
+    "tailwindcss": "^1.1.4"
+  }
+}
